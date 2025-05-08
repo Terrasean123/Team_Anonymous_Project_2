@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yamen Sayes">
+    <title>Apply for a job | Anonymous</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body id="applyBody">
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Team Anonymous Logo">
+                <span>Anonymous</span>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="applyForm">
+        <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php"> <!--Opening the form-->
+            <fieldset id="applyFormSection">
+                <legend id="formLegend"><strong>Apply for a job:</strong></legend>
+                <p>     <!--Input for the job reference number-->
+                    <label for="jobRefNum">Job reference number:
+                        <select class="input" name="jobRefNum" id="jobRefNum" required>
+                            <option value="">Please Select</option>
+                            <option value="SDT21">SDT21</option>
+                            <option value="ISA58">ISA58</option>
+                            <option value="DAN92">DAN92</option>
+                        </select>
+                    </label>
+                </p>
+                <p>     <!--Input for first and last names-->
+                    <label for="firstName">First Name:
+                        <input class="input" type="text" name="firstName" id="firstName" required maxlength="20" pattern="[a-zA-Z]+" oninvalid="('Please only enter a maximum of 20 alpha characters')">
+                    </label>
+                </p>
+                <p>
+                    <label for="lastName">Last Name:
+                        <input class="input" type="text" name="lastName" id="lastName" required maxlength="20" pattern="[a-zA-Z]+" oninvalid="('Please only enter a maximum of 20 alpha characters')">
+                    </label>
+                </p>
+                <p>     <!--Input for date of birth-->
+                    <label for="dob">Date of Birth:
+                        <input class="input" type="date" name= "dob" id="dob" size="10" max="2025-12-31" required> 
+                    </label>
+                </p>
+                <fieldset id="genderFieldset">      <!--Input for gender-->
+                    <legend><strong>Gender:</strong></legend>
+                    <p id="genderRadio">
+                        <label for="male">Male</label> 
+	        			<input type="radio" id="male" name="gender" value="male" required>
+        			    <label for="female">Female</label> 
+	    			    <input type="radio" id="female" name="gender" value="female">
+                    </p>
+                </fieldset>
+                <p>     <!--Input for street address -->
+                    <label for="streetAddress">Street address: 
+                        <input class="input" type="text" name="streetAddress" id="streetAddress" required maxlength="40" oninvalid="setCustomValidity('Please enter a maximum of 40 alpha characters')">
+                    </label>
+                </p>
+                <p>     <!--Input for suburb/town-->
+                    <label for="suburbTown">Suburb/town: 
+                        <input class="input" type="text" name="suburbTown" id="suburbTown" required maxlength="40" oninvalid="setCustomValidity('Please enter a maximum of 40 alpha characters')">
+                    </label>
+                </p>
+                <p>     <!--Input for state-->
+                    <label for="state">State: 
+                        <select class="input" name="state" id="state" required>
+                            <option value="">Please select</option>
+                            <option value="VIC">VIC</option>
+                            <option value="NSW">NSW</option>
+                            <option value="QLD">QLD</option>
+                            <option value="NT">NT</option>
+                            <option value="WA">WA</option>
+                            <option value="SA">SA</option>
+                            <option value="TAS">TAS</option>
+                            <option value="ACT">ACT</option>
+                        </select>
+                    </label>
+                </p>
+                <p>     <!--Input for the postcode-->
+                    <label for="postcode">Postcode:
+                        <input class="input" type="text" name="postcode" id="postcode" minlength="4" maxlength="4" pattern="[0-9]+">
+                    </label>
+                </p>
+                <p>     <!--Input for phone number-->
+                    <label for="phoneNumber">Phone Number:
+                        <input class="input" type="text" name="phoneNumber" id="phoneNumber" minlength="8" maxlength="12" pattern="[0-9]+">
+                    </label>
+                </p>
+                <fieldset id="qualificationCheckbox">
+                    <legend><strong>Required Technical Qualifications:</strong></legend>
+                    <p>     <!--Input for technical list checkbox-->
+                        <input class="checkbox" type="checkbox" id="bachelorDegree" name="qualifications[]" value="bachelorDegree" required>
+                        <label for="bachelorDegree">Bachelor's degree in Computer Science, Software Engineering, or a related field, or equivalent practical experience.</label>
+                    </p>
+                    <p>
+                        <input class="checkbox" type="checkbox" id="threeYearsExp" name="qualifications[]" value="threeYearsExp" required>
+                        <label for="threeYearsExp">Minimum of 3 years of professional experience in software development.</label>
+                    </p>
+                    <p>
+                        <input class="checkbox" type="checkbox" id="twoLanguageProficiency" name="qualifications[]" value="twoLanguageProficiency" required>
+                        <label for="twoLanguageProficiency">Strong proficiency in at least two programming languages such as Java, Python, C#, or JavaScript.</label>
+                    </p>
+                    <p>
+                        <input class="checkbox" type="checkbox" id="frameworkExperience" name="qualifications[]" value="frameworkExperience" required>
+                        <label for="frameworkExperience">Experience with software development frameworks and technologies (e.g., .NET, React, Angular, Spring, Django).</label>
+                    </p>
+                    <p></p>
+                </fieldset>
+                <p>     <!--Input for other skills-->
+                    <label for="otherSkills">Other skills:
+                        <p></p>
+                        <textarea name="otherSkills" id="otherSkills" rows="4" cols="40" placeholder="Write about your other skills here..."></textarea>
+                    </label>
+                </p>
+                <p>
+                    <input id="applyButton" type= "submit" value="Apply">      <!--Submit button-->
+                </p>
+                <p>
+	                <input id="resetButton" type= "reset" value="Reset Form">   <!--reset form button-->
+                </p>
+            </fieldset>
+        </form>
+    </div>
+    <footer> <!--footer fdr bottom of the page-->
+        <div class="footer-container">
+            <div class="footer-logo"> <!--image for the logo-->
+                <img src="images/logo.png" alt="Team Logo">
+            </div>
+            <div class="footer-copyright"> <!--Copywright text-->
+                <p>© 2025 Team Anonymous</p>
+            </div>
+            <nav class="footer-nav"> <!--Privacy link-->
+                <a href="privacy.html">Privacy</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
