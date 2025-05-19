@@ -7,21 +7,7 @@
     <title>Jobs Available | Anonymous</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<body class = "jobs">
-    <header>
-        <nav> <!--Navigation header setup-->
-            <div class="logo">
-                <img src="images/logo.png" alt="Team Anonymous Logo">
-                <span>Anonymous</span>
-            </div>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="apply.html">Apply</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
+<?php include 'header.inc'; ?>
     <div class="main_header"> <!--Main header of the page setup at the front of the website-->
         <figure>
             <img src="images/jobs_image.png" alt="Group of team working together" class="banner_image">
