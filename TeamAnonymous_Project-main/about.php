@@ -50,24 +50,30 @@
                     <h3>Sean Makoka</h3>
                     <p>HTML programmer</p>
                     <p>Worked on the Home Page</p>
+                    <p>Worked on improvements to reusable elements</p>
                 </div>
                 <div class="member">
                     <img src="images/mustafa.jpg" alt="Mustafa">
                     <h3>Mustafa</h3>
                     <p>HTML programmer</p>
-                    <p>Worked on the Jobs Page</p>
+                    <p>Worked on the Jobs Page worked</p>
+                    <p>Worked on  manager login page</p>
                 </div>
                 <div class="member">
                     <img src="images/yamen.jpg" alt="Yamen Sayes">
                     <h3>Yamen Sayes</h3>
                     <p>HTML programmer</p>
                     <p>Worked on the Apply Page</p>
+                    <p>Worked on Job Description page</p>
+
                 </div>
                 <div class="member">
                     <img src="images/mohammed.jpg" alt="Mohammed">
                     <h3>Mohammed</h3>
                     <p>HTML programmer</p>
                     <p>Worked on the About Page</p>
+                    <p>Worked on eoi table</p>
+
                 </div>
             </div>
 
@@ -99,6 +105,6 @@
         </p>
     </main>
     <?php include 'footer.inc'; ?>
-    
+
 </body>
 </html>
