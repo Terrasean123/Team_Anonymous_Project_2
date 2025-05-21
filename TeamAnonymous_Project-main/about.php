@@ -9,21 +9,7 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="images/logo.png" alt="Team Anonymous Logo">
-                <span>Anonymous</span>
-            </div>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="apply.html">Apply</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    <?php include 'header.inc'; ?>
     <main>
         <!-- bannerSection with Background Image -->
         <section class="banner">
@@ -112,19 +98,7 @@
             <a href="mailto:anonymous@swin.edu.au" class="cta-button">Contact Us</a>
         </p>
     </main>
-
-    <footer> <!--footer fdr bottom of the page-->
-        <div class="footer-container">
-            <div class="footer-logo"> <!--image for the logo-->
-                <img src="images/logo.png" alt="Team Logo">
-            </div>
-            <div class="footer-copyright"> <!--Copywright text-->
-                <p>© 2025 Team Anonymous</p>
-            </div>
-            <nav class="footer-nav"> <!--Privacy link-->
-                <a href="privacy.html">Privacy</a>
-            </nav>
-        </div>
-    </footer>
+    <?php include 'footer.inc'; ?>
+    
 </body>
 </html>
