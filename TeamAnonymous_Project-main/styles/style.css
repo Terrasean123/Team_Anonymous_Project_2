@@ -1,3 +1,92 @@
+#manage-content {
+    flex: 1 0 auto;
+}
+
+.displayAllForm {
+    display: flex;
+    justify-content: center;
+}
+
+
+#manage-content h1,
+#manage-content h2 {
+    color: #370b52; 
+    margin-bottom: 25px; /* Space below headings */
+    text-align: center; /* Center the headings */
+}
+
+
+
+#manage-content form {
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center; 
+    gap: 15px; 
+    display: flex;
+    justify-content: center;
+}
+
+/* Style for labels */
+#manage-content label {
+    font-weight: bold;
+    color: #555;
+    min-width: 150px; /* Give labels a minimum width for alignment */
+}
+
+/* Style for text input fields and select dropdowns */
+#manage-content input[type="text"],
+#manage-content select {
+    flex-grow: 1; /* Allow inputs to grow and fill available space */
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 300px; /* Limit max width for readability */
+}
+
+/* Style for buttons within forms */
+#manage-content form button {
+    padding: 10px 25px;
+    background: linear-gradient(135deg, #6a1b9a, #a73fb9); /* Your existing purple gradient */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#manage-content form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#manage_script table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#manage_script th, 
+#manage_script td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+#manage_script th {
+    background-color: #6b3f91;
+    color: white;
+}
+
+#manage_script tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
 
 
 
@@ -449,7 +538,7 @@ footer {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.25);
-    margin: 40px auto 0;
+    margin: auto 0;
     width: 100%;
 }
 
@@ -801,15 +890,3 @@ legend {
     justify-content: space-around;
 }
 
-/*
-label {
-    display: flex;
-    flex-direction: row;
-    justify-self:start;
-}
-
-*/
-
-textarea {
-    border-radius: 10px;
-}
