@@ -8,20 +8,7 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="images/logo.png" alt="Team Anonymous Logo">
-                <span>Anonymous</span>
-            </div>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.php">Jobs</a></li>
-                <li><a href="apply.html">Apply</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php include 'header.inc'; ?>
     <div class = "banner"> <img src="images/programming_image.jpg" alt="programming img"  width="100%"></div>
     <div class="apply_prompt">
     <div class = keywords>Apply</div> now to be a part of the <div class = keywords>Team</div>
@@ -89,21 +76,6 @@
          no matter where you are.
     </p>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-logo"> <!--image for the logo-->
-                <img src="images/logo.png" alt="Team Logo">
-            </div>
-            
-            <nav class="footer-nav">
-                <a href="privacy.html">Privacy</a>
-                <a href="https://github.com/Terrasean123/TeamAnonymous_Project">Our Github</a>
-            </nav>
-            
-            <div class="footer-copyright">
-                <p>© 2025 Team Anonymous</p>
-            </div>
-        </div>
-    </footer>
+    <?php include 'footer.inc'; ?>
 </body>
 </html>

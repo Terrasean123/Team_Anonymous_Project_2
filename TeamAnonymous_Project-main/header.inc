@@ -1,4 +1,3 @@
-<body class="jobs">
     <header>
         <nav>
             <div class="logo">

@@ -8,20 +8,7 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body id="applyBody">
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="images/logo.png" alt="Team Anonymous Logo">
-                <span>Anonymous</span>
-            </div>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="apply.html">Apply</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php include 'header.inc'; ?>
     <div class="applyForm">
         <form method="post" action="process_eoi.php">
             <fieldset id="applyFormSection">
@@ -160,18 +147,6 @@
             </fieldset>
         </form>
     </div>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src="images/logo.png" alt="Team Logo">
-            </div>
-            <div class="footer-copyright">
-                <p>© 2025 Team Anonymous</p>
-            </div>
-            <nav class="footer-nav">
-                <a href="privacy.html">Privacy</a>
-            </nav>
-        </div>
-    </footer>
+    <?php include 'footer.inc'; ?>
 </body>
 </html>
