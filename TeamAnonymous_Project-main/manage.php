@@ -153,7 +153,7 @@
                 echo "</table>";
             } else {
                 // No results found message
-                echo "There are no EOI.";
+                echo "None found";
             }
         }
         ?>
