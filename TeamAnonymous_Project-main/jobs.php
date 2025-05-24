@@ -54,7 +54,6 @@
                         echo "<p>Reports to \"$reportsTo\"</p> ";
                         echo "<section class='responsibilities'> <!--Section for the responsibilities of the job-->";
                             echo "<h3>Key Responsibilities</h3>";
-                            echo "<p>$keyResponsibilities</p>";
                             echo "<ul> <!--Unordered list for Software devloper responsibilities--> <!--Utilised the prompt in gen AI : Generate Key responsibilities. A list of the specific tasks that are to be performed for software developer-->";
                             for ($i=0; $i<count($keyResponsibilities); $i++){
                                 echo "<li>$keyResponsibilities[$i]</li>";
@@ -87,65 +86,7 @@
                 }
             }
         }
-        
-
         ?>
-        
-        <div class="DAN92"> <!-- New div element for the data analyst job-->
-            <h2>Data Analyst (DAN92)</h2> <!--Main header for the job title -->
-            <p>Team Anonymous</p>
-            <p>Melbourne VIC</p>
-            <h3>Brief Description</h3> <!--Heading for brief description-->
-            <p>We are seeking a skilled and detail-oriented Data Analyst to join our team. The successful candidate will be responsible for collecting, processing, and analyzing large datasets to help drive business decisions. The role involves working closely with cross-functional teams to provide actionable insights through data visualization and reporting, ensuring that the organization’s data-driven strategies are executed effectively.</p>
-            <h3>Salary Range</h3>
-            <p>$55,000 - $85,000 per year</p>
-            <p>Reports to Data Scientist Manager</p>
-            <section id="responsibilitiesDAN92"> <!--Section element for the responsibilitis for data analyst-->
-                <h3>Key Responsibilities</h3> <!-- Header for key responsibilities-->
-                <ul> <!-- Unoredered list for responsibiltiies--> <!--Utilised the prompt in gen AI : Generate Key responsibilities. A list of the specific tasks that are to be performed for a Data Analyst-->
-                    <li>Collect, clean, and process data from various sources to ensure accuracy and reliability.</li>
-                    <li>Perform exploratory data analysis (EDA) to uncover trends, patterns, and insights.</li>
-                    <li>Create and maintain dashboards and reports that present complex data in a clear, understandable manner.</li>
-                    <li>Perform statistical analysis and modeling to support business decisions and predict trends.</li>
-                    <li>Conduct data validation and quality assurance to ensure data integrity and consistency.</li>
-                    <li>Provide recommendations based on data analysis to optimize business operations and performance.</li>
-                    <li>Develop and maintain automated processes to streamline data collection and reporting.</li>
-                    <li>Continuously monitor key performance indicators (KPIs) to track and evaluate business performance.</li>
-                    <li>Assist with data-related training and mentoring of junior team members.</li>
-                </ul>
-            </section>
-            <h3 id="required_qualificationsDAN92">Required qualifications, skills, knowledge and attributes</h3> 
-            <section id="essentialDAN92"> <!--Sectioin for the essential requirements-->
-                <h2>Essential</h2>
-                <ol> <!--Ordered list for the essential requirements--> <!--Utilised the prompt in gen AI : Generate essential requirements for Data Analyst-->
-                    <li>Bachelor’s degree in Data Science, Statistics, Mathematics, Computer Science, or a related field.</li>
-                    <li>Minimum of 2 years of professional experience in a data analysis role.</li>
-                    <li>Strong proficiency in data analysis tools and programming languages (e.g., Excel, SQL, Python, R).</li>
-                    <li>Experience with data visualization tools (e.g., Tableau, Power BI, or similar platforms).</li>
-                    <li>Solid understanding of statistical methods and techniques for data analysis.</li>
-                    <li>Ability to interpret and communicate complex data insights to non-technical stakeholders.</li>
-                    <li>Strong attention to detail and excellent problem-solving skills.</li>
-                    <li>Familiarity with databases and data management concepts.</li>
-                </ol>
-            </section>
-            <aside id="preferrableDAN92"> <!--Aside element for preferrable qualifiations for the data analyst-->
-                <h2>Preferrable</h2>
-                <ul style="list-style-type: square;"> <!--unoredered list with box square dots instead of circle--> <!--Utilised the prompt in gen AI : Generate preferred requirements for a Data analyst-->
-                    <li>Master’s degree in Data Science, Statistics, Mathematics, or a related field.</li>
-                    <li>4+ years of experience in data analysis or business intelligence.</li>
-                    <li>Experience with big data technologies (e.g., Hadoop, Spark).</li>
-                    <li>Familiarity with machine learning algorithms and predictive analytics.</li>
-                    <li>Proficiency in advanced statistical techniques (e.g., regression analysis, time-series forecasting).</li>
-                    <li>Knowledge of cloud-based data storage solutions (e.g., AWS, Google BigQuery).</li>
-                    <li>Experience with programming languages for data manipulation (e.g., Pandas, NumPy).</li>
-                </ul>
-            </aside>
-            <!--Utilised the prompt in gen AI : Generate candidate description for a Data Analyst-->
-            <p id ="candidate_descriptionDAN92">The successful candidate will be an analytical thinker with a passion for data and a strong drive to deliver actionable insights. We are looking for a team player who can navigate complex data challenges and provide meaningful recommendations to enhance business performance.</p>
-            <p class="apply_button">
-                <a href="apply.html" class="apply-button">Apply Now</a> <!--apply button that links to apply page-->
-            </p>
-        </div>
     </main>
     <?php include 'footer.inc'; ?>
 </body>
