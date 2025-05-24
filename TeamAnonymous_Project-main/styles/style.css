@@ -613,7 +613,7 @@ footer {
     }
 }
 
-/* Jobs page style Author Mustafa Jaffari Created 10/04 , Last Modified 12/04*/
+/* Jobs page style Author Mustafa Jaffari Created 10/04 , Last Modified 24/05*/
 .main_header h1 { /*Targets main header class */
     background: linear-gradient(135deg, #370b52, #a73fb9); /* Changes Background colour */
     text-align: center; /* Aligns text in centre */
@@ -639,14 +639,14 @@ footer {
     box-sizing: border-box;  /* Keeps padding and border inside the set widhgt and height */
 }
 
-#essentialSDT21 {  /*  Targets essential id element of SDT21*/
+.essential {  /*  Targets essential class element*/
     width: 30%; /* Adds width of 30% to alow it cover 30% of the page*/
     float: left;  /* Floats this element to the left */
     padding: 10px; /* Adds padding of 10px */
     margin: 50px; /* Adds a margin(space around the element) of 50px*/
 }
 
-#preferrableSDT21 { /*  Targets Preferrable id element of SDT21*/
+.preferrable { /*  Targets Preferrable class element*/
     width: 25%; /* Adds width of 25% to alow it cover 25% of the page*/
     float: right;  /* Floats this element to the right */
     padding: 10px; /* Adds padding of 10px */
@@ -655,60 +655,14 @@ footer {
     margin: 50px; /* Adds a margin(space around the element) of 50px*/
 }
 
-#responsibilitiesSDT21 {  /*  Targets Responsibilities id element of SDT21*/
+.responsibilities {  /*  Targets Responsibilities class element*/
     width: 30%; /* Adds width of 30% to alow it cover 30% of the page*/
     float: left; /* Floats this element to the left */
     padding: 10px; /* Adds padding of 10px */
     margin: 50px; /* Adds a margin(space around the element) of 50px*/
 }
 
-#essentialISA58 {  /*  Targets essential id element of ISA58*/
-    width: 30%; /* Adds width of 30% to alow it cover 30% of the page*/
-    float: left;  /* Floats this element to the left */
-    padding: 10px; /* Adds padding of 10px */
-    margin: 50px; /* Adds a margin(space around the element) of 50px*/
-}
-
-#preferrableISA58 { /*  Targets Preferrable id element of ISA58*/
-    width: 25%; /* Adds width of 25% to alow it cover 25% of the page*/
-    float: right;  /* Floats this element to the right */
-    padding: 10px; /* Adds padding of 10px */
-    border: 5px solid purple; /*Creates a border around element with 5px and is a solid colour of purple */
-    border-radius: 10px; /*Creates a border radius of extra 10px */
-    margin: 50px; /* Adds a margin(space around the element) of 50px*/
-}
-
-#responsibilitiesISA58 {  /*  Targets Responsibilities id element of ISA58*/
-    width: 30%; /* Adds width of 30% to alow it cover 30% of the page*/
-    float: left; /* Floats this element to the left */
-    padding: 10px; /* Adds padding of 10px */
-    margin: 50px; /* Adds a margin(space around the element) of 50px*/
-}
-
-#essentialDAN92 {  /*  Targets essential id element of DAN92*/
-    width: 30%; /* Adds width of 30% to alow it cover 30% of the page*/
-    float: left;  /* Floats this element to the left */
-    padding: 10px; /* Adds padding of 10px */
-    margin: 50px; /* Adds a margin(space around the element) of 50px*/
-}
-
-#preferrableDAN92 { /*  Targets Preferrable id element of DAN92*/
-    width: 25%; /* Adds width of 25% to alow it cover 25% of the page*/
-    float: right;  /* Floats this element to the right */
-    padding: 10px; /* Adds padding of 10px */
-    border: 5px solid purple; /*Creates a border around element with 5px and is a solid colour of purple */
-    border-radius: 10px; /*Creates a border radius of extra 10px */
-    margin: 50px; /* Adds a margin(space around the element) of 50px*/
-}
-
-#responsibilitiesDAN92 {  /*  Targets Responsibilities id element of DAN92*/
-    width: 30%; /* Adds width of 30% to alow it cover 30% of the page*/
-    float: left; /* Floats this element to the left */
-    padding: 10px; /* Adds padding of 10px */
-    margin: 50px; /* Adds a margin(space around the element) of 50px*/
-}
-
-.SDT21, .ISA58, .DAN92 { /* Targets the SDT21, ISA58, DAN92 class element*/
+.job { /* Targets the job class element*/
     clear: both;  /*Clears both left and righ floating elements*/
     margin: 10%; /* Adds margin of 10% */
     padding: 20px; /* Adds 20px of padding*/
@@ -717,29 +671,14 @@ footer {
     
 }
 
-#candidate_descriptionSDT21 { /*Targets candidate_descriptionSDT21 id element*/
+.candidate_description { /*Targets candidate_description class element*/
     clear: both; /*Clears both left and righ floating elements*/
 }
 
-#candidate_descriptionISA58 { /*Targets candidate_descriptionISA58 id element*/
+.required_qualifications { /*Targets candidate_description class element*/
     clear: both; /*Clears both left and righ floating elements*/
 }
 
-#candidate_descriptionDAN92 { /*Targets candidate_descriptionDAN92 id element*/
-    clear: both; /*Clears both left and righ floating elements*/
-}
-
-#required_qualificationsSDT21 { /*Targets candidate_descriptionSDT21 id element*/
-    clear: both; /*Clears both left and righ floating elements*/
-}
-
-#required_qualificationsISA58 { /*Targets candidate_descriptionISA58 id element*/
-    clear: both; /*Clears both left and righ floating elements*/
-}
-
-#required_qualificationsDAN92 { /*Targets candidate_descriptionDAN92 id element*/
-    clear: both; /*Clears both left and righ floating elements*/
-}
 
 .apply_button { /* targets apply_button */
     text-align: center; /* aligns text in centre */

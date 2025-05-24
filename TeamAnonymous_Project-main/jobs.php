@@ -42,124 +42,69 @@
                     $idealApplicant=htmlspecialchars($row['ideal_applicant']);
 
 
-
+                    echo "<div class='job'> <!--Division setup for the Software developer part of the page-->";
+                        echo "<h2>\"$jobTitle \" (\"$jobReferenceNum\")</h2> <!--Utilised the prompt in gen AI : Generate a 5 digit reference number for software developer job -->";
+                        echo "<p>\"$employer\"</p>";
+                        echo "<p>\"$location\"</p>";
+                        echo "<h3>Brief Description</h3>";
+                        echo "<!--Utilised the prompt in gen AI : Generate a brief description of the position for software developer-->";
+                        echo "<p>\"$jobDescription\"</p>";
+                        echo "<h3>Salary Range</h3>";
+                        echo "<p>$\"$jobMinSalary\" - $\"$jobMaxSalary\" per year</p> <!--Researched myself and chose some numbers-->";
+                        echo "<p>Reports to \"$reportsTo\"</p> ";
+                        echo "<section class='responsibilities'> <!--Section for the responsibilities of the job-->";
+                            echo "<h3>Key Responsibilities</h3>";
+                            echo "<ul> <!--Unordered list for Software devloper responsibilities--> <!--Utilised the prompt in gen AI : Generate Key responsibilities. A list of the specific tasks that are to be performed for software developer-->";
+                                echo "<li>Design, develop, and implement software solutions that meet the business requirements.</li>";
+                                echo "<li>Write clean, scalable, and efficient code, following best practices and coding standards.</li>";
+                                echo "<li>Perform code reviews and provide constructive feedback to peers.</li>";
+                                echo "<li>Collaborate with project managers, designers, and other developers to deliver high-quality solutions on time.</li>";
+                                echo "<li>Troubleshoot, debug, and upgrade existing software applications.</li>";
+                                echo "<li>Test and deploy applications and systems, ensuring cross-platform functionality.</li>";
+                                echo "<li>Document development processes, code changes, and technical specifications.</li>";
+                                echo "<li>Stay up-to-date with emerging trends and technologies in software development.</li>";
+                                echo "<li>Provide technical support and guidance to other team members when necessary.</li>";
+                            echo "</ul>";
+                        echo "</section>";
+                        echo "<h3 class='required_qualifications'>Required qualifications, skills, knowledge and attributes</h3> <!-- Header for the required qualifications-->";
+                        echo "<section class='essential'> <!-- new section for the essential requirements for software devloper-->";
+                            echo "<h4>Essential</h4>";
+                            echo "<ol> <!--Ordered list--> <!--Utilised the prompt in gen AI : Generate essential requirements for a software developer-->";
+                                echo "<li>Bachelor's degree in Computer Science, Software Engineering, or a related field, or equivalent practical experience.</li>";
+                                echo "<li>Minimum of 3 years of professional experience in software development.</li>";
+                                echo "<li>Strong proficiency in at least two programming languages such as Java, Python, C#, or JavaScript.</li>";
+                                echo "<li>Experience with software development frameworks and technologies (e.g., .NET, React, Angular, Spring, Django).</li>";
+                                echo "<li>Strong understanding of object-oriented design principles and software architecture.</li>";
+                                echo "<li>Proficient in version control systems, such as Git.</li>";
+                                echo "<li>Familiarity with relational and non-relational databases (e.g., MySQL, MongoDB).</li>";
+                                echo "<li>Ability to work independently and as part of a team in a fast-paced environment.</li>";
+                            echo "</ol>";
+                        echo "</section>";
+                        echo "<aside class='preferrable'> <!--Aside element for preferred qualifications for software developer with an unordered list to allow it to pan on the left side of the screen-->";
+                            echo "<h4>Preferrable</h4>";
+                            echo "<ul style='list-style-type: square;'> <!--Lists the dot points in squares rather than dots --> <!--Utilised the prompt in gen AI : Generate preferred requirements for a software developer-->";
+                                echo "<li>Master's degree in Computer Science, Software Engineering, or a related field.</li>";
+                                echo "<li>5+ years of experience in software development.</li>";
+                                echo "<li>Experience with cloud platforms such as AWS, Azure, or Google Cloud.</li>";
+                                echo "<li>Knowledge of containerization technologies such as Docker and Kubernetes.</li>";
+                                echo "<li>Familiarity with CI/CD pipelines and automated testing tools.</li>";
+                                echo "<li>Understanding of Agile methodologies, such as Scrum or Kanban.</li>";
+                                echo "<li>Experience with mobile development frameworks (e.g., React Native, Swift, Kotlin).</li>";
+                            echo "</ul>";
+                        echo "</aside>";
+                        echo "<!--Utilised the prompt in gen AI : Generate candidate description for a software developer-->";
+                        echo "<p class ='candidate_description'>The successful applicant will be expected to work in an environment that values innovation, collaboration, and continuous improvement.</p>";
+                        echo "<p class='apply_button'>";
+                            echo "<a href='apply.html' class='apply-button'>Apply Now</a> <!--apply button that links to apply page-->";
+                        echo "</p>";
+                    echo "</div>";
                 }
             }
         }
         
 
         ?>
-        <div class="SDT21"> <!--Division setup for the Software developer part of the page-->
-            <h2 id="software_developer">Software Developer (SDT21)</h2> <!--Utilised the prompt in gen AI : Generate a 5 digit reference number for software developer job -->
-            <p>Team Anonymous</p>
-            <p>Melbourne VIC</p>
-            <h3>Brief Description</h3>
-            <!--Utilised the prompt in gen AI : Generate a brief description of the position for software developer-->
-            <p>We are seeking a skilled and dynamic Software Developer to join our development team. The successful candidate will be responsible for designing, developing, and maintaining high-quality software applications. This role involves collaborating with cross-functional teams to meet the needs of our clients and ensure the delivery of robust and scalable solutions.</p>
-            <h3>Salary Range</h3>
-            <p>$100,000 - $140,000 per year</p> <!--Researched myself and chose some numbers-->
-            <p>Reports to Software Developer Manager</p> 
-            <section id="responsibilitiesSDT21"> <!--Section for the responsibilities of the job-->
-                <h3>Key Responsibilities</h3>
-                <ul> <!--Unordered list for Software devloper responsibilities--> <!--Utilised the prompt in gen AI : Generate Key responsibilities. A list of the specific tasks that are to be performed for software developer-->
-                    <li>Design, develop, and implement software solutions that meet the business requirements.</li>
-                    <li>Write clean, scalable, and efficient code, following best practices and coding standards.</li>
-                    <li>Perform code reviews and provide constructive feedback to peers.</li>
-                    <li>Collaborate with project managers, designers, and other developers to deliver high-quality solutions on time.</li>
-                    <li>Troubleshoot, debug, and upgrade existing software applications.</li>
-                    <li>Test and deploy applications and systems, ensuring cross-platform functionality.</li>
-                    <li>Document development processes, code changes, and technical specifications.</li>
-                    <li>Stay up-to-date with emerging trends and technologies in software development.</li>
-                    <li>Provide technical support and guidance to other team members when necessary.</li>
-                </ul>
-            </section>
-            <h3 id="required_qualificationsSDT21">Required qualifications, skills, knowledge and attributes</h3> <!-- Header for the required qualifications-->
-            <section id="essentialSDT21"> <!-- new section for the essential requirements for software devloper-->
-                <h4>Essential</h4>
-                <ol> <!--Ordered list--> <!--Utilised the prompt in gen AI : Generate essential requirements for a software developer-->
-                    <li>Bachelor's degree in Computer Science, Software Engineering, or a related field, or equivalent practical experience.</li>
-                    <li>Minimum of 3 years of professional experience in software development.</li>
-                    <li>Strong proficiency in at least two programming languages such as Java, Python, C#, or JavaScript.</li>
-                    <li>Experience with software development frameworks and technologies (e.g., .NET, React, Angular, Spring, Django).</li>
-                    <li>Strong understanding of object-oriented design principles and software architecture.</li>
-                    <li>Proficient in version control systems, such as Git.</li>
-                    <li>Familiarity with relational and non-relational databases (e.g., MySQL, MongoDB).</li>
-                    <li>Ability to work independently and as part of a team in a fast-paced environment.</li>
-                </ol>
-            </section>
-            <aside id="preferrableSDT21"> <!--Aside element for preferred qualifications for software developer with an unordered list to allow it to pan on the left side of the screen-->
-                <h4>Preferrable</h4>
-                <ul style="list-style-type: square;"> <!--Lists the dot points in squares rather than dots --> <!--Utilised the prompt in gen AI : Generate preferred requirements for a software developer-->
-                    <li>Master's degree in Computer Science, Software Engineering, or a related field.</li>
-                    <li>5+ years of experience in software development.</li>
-                    <li>Experience with cloud platforms such as AWS, Azure, or Google Cloud.</li>
-                    <li>Knowledge of containerization technologies such as Docker and Kubernetes.</li>
-                    <li>Familiarity with CI/CD pipelines and automated testing tools.</li>
-                    <li>Understanding of Agile methodologies, such as Scrum or Kanban.</li>
-                    <li>Experience with mobile development frameworks (e.g., React Native, Swift, Kotlin).</li>
-                </ul>
-            </aside>
-            <!--Utilised the prompt in gen AI : Generate candidate description for a software developer-->
-            <p id ="candidate_descriptionSDT21">The successful applicant will be expected to work in an environment that values innovation, collaboration, and continuous improvement.</p>
-            <p class="apply_button">
-                <a href="apply.html" class="apply-button">Apply Now</a> <!--apply button that links to apply page-->
-            </p>
-        </div>
-        <div class="ISA58"> <!--Div element for the IT System adminstrator job-->
-            <h2>IT System Administrator (ISA58)</h2> <!-- Header for section-->
-            <p>Team Anonymous</p>
-            <p>Melbourne VIC</p>
-            <h3>Brief Description</h3> <!--Header for brief description--> <!--Utilised the prompt in gen AI : Generate a brief description of the position for IT system administrator-->
-            <p>We are looking for a dedicated and experienced IT Systems Administrator to join our team. The successful candidate will be responsible for managing and maintaining our company’s IT infrastructure, ensuring that all systems and networks run smoothly, securely, and efficiently. This role requires a hands-on approach to troubleshooting, installation, configuration, and providing technical support to end-users.</p>
-            <h3>Salary Range</h3>
-            <p>$60,000 - $90,000 per year</p>
-            <p>Reports to IT Manager</p>
-            <section id="responsibilitiesISA58"> <!-- Section for the responsibilities-->
-                <h3>Key Responsibilities</h3>
-                <ul> <!--unOrdered list for responsibilities-->  <!--Utilised the prompt in gen AI : Generate Key responsibilities. A list of the specific tasks that are to be performed for IT System administrator-->
-                    <li>Install, configure, and maintain company servers, networks, and systems.</li>
-                    <li>Monitor system performance, identifying and resolving potential issues proactively.</li>
-                    <li>Provide support and troubleshooting for hardware and software issues for all employees.</li>
-                    <li>Manage user accounts, permissions, and access control across company systems and applications.</li>
-                    <li>Ensure system security through regular patches, updates, and antivirus management.</li>
-                    <li>Conduct regular data backups and ensure disaster recovery procedures are in place.</li>
-                    <li>Collaborate with the development and support teams to implement new IT solutions.</li>
-                    <li>Perform network configuration, setup, and maintenance, ensuring optimal system uptime.</li>
-                    <li>Maintain documentation for system configurations, processes, and troubleshooting guides.</li>
-                </ul>
-            </section>
-            <h3 id="required_qualificationsISA58">Required qualifications, skills, knowledge and attributes</h3>
-            <section id="essentialISA58"> <!-- Section for the essential requirements-->
-                <h4>Essential</h4>
-                <ol> <!-- oredered list--> <!--Utilised the prompt in gen AI : Generate essential requirements for IT System Administrator-->
-                    <li>Bachelor’s degree in Information Technology, Computer Science, or a related field, or equivalent practical experience.</li>
-                    <li>Minimum of 3 years of experience as a Systems Administrator or in a similar IT support role.</li>
-                    <li>Strong knowledge of Windows and Linux server operating systems.</li>
-                    <li>Experience with network protocols, such as TCP/IP, DNS, DHCP, and VPNs.</li>
-                    <li>Hands-on experience with virtualization technologies (e.g., VMware, Hyper-V).</li>
-                    <li>Proficiency with cloud platforms such as AWS, Microsoft Azure, or Google Cloud.</li>
-                    <li>Familiarity with backup and recovery tools, and disaster recovery processes.</li>
-                    <li>Experience with monitoring tools and software to assess system performance (e.g., Nagios, Zabbix).</li>
-                </ol>
-            </section>
-            <aside id="preferrableISA58">  <!--Aside element for the preferrable to follow rubric--> 
-                <h4>Preferrable</h4>
-                <ul style="list-style-type: square;"> <!--Unoredered list in box dot instead of circle dot--> <!--Utilised the prompt in gen AI : Generate preferred requirements for an IT system administrator-->
-                    <li>Certifications such as CompTIA Network+, Microsoft Certified Systems Administrator (MCSA), or Cisco Certified Network Associate (CCNA).</li>
-                    <li>5+ years of experience in systems administration or a similar role.</li>
-                    <li>Experience with managing Active Directory, Group Policy, and Exchange.</li>
-                    <li>Familiarity with automation and scripting languages (e.g., PowerShell, Bash, Python).</li>
-                    <li>Experience with ITIL frameworks and practices.</li>
-                    <li>Knowledge of containerization tools such as Docker.</li>
-                    <li>Familiarity with network troubleshooting tools (e.g., Wireshark, tcpdump).</li>
-                </ul>
-            </aside>
-            <!--Utilised the prompt in gen AI : Generate candidate description for an IT system administrator-->
-            <p id ="candidate_descriptionISA58">The ideal candidate will be self-motivated, detail-oriented, and possess excellent time management skills to ensure the smooth operation of the company’s IT systems. We offer a collaborative environment where continuous learning and professional development are highly encouraged.</p>
-            <p class="apply_button">
-                <a href="apply.html" class="apply-button">Apply Now</a> <!--apply button that links to apply page-->
-            </p>
-        </div>
+        
         <div class="DAN92"> <!-- New div element for the data analyst job-->
             <h2>Data Analyst (DAN92)</h2> <!--Main header for the job title -->
             <p>Team Anonymous</p>
