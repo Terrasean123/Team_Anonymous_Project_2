@@ -7,7 +7,7 @@
     <title>Jobs Available | Anonymous</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<?php include 'header.inc'; ?>
+    <?php include 'header.inc'; ?>
     <div class="main_header"> <!--Main header of the page setup at the front of the website-->
         <figure>
             <img src="images/jobs_image.png" alt="Group of team working together" class="banner_image">
