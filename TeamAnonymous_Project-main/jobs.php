@@ -36,10 +36,10 @@
                     $jobMinSalary=htmlspecialchars($row['job_salary_min']);
                     $jobMaxSalary=htmlspecialchars($row['job_salary_max']);
                     $reportsTo=htmlspecialchars($row['reports_to']);
-                    $keyResponsibilities=htmlspecialchars($row['key_responsibilities']);
-                    $essentialQualifications=htmlspecialchars($row['essential_qualifications']);
-                    $preferrableQualifications=htmlspecialchars($row['preferrable_qualifications']);
-                    $idealApplicant=htmlspecialchars($row['ideal_applicant']);
+                    $keyResponsibilities=preg_split("/\n/", htmlspecialchars($row['key_responsibilities']));
+                    $essentialQualifications=preg_split("/\n/", htmlspecialchars($row['essential_qualifications']));
+                    $preferrableQualifications=preg_split("/\n/", htmlspecialchars($row['preferrable_qualifications']));
+                    $idealApplicant=preg_split("/\n/", htmlspecialchars($row['ideal_applicant']));
 
 
                     echo "<div class='job'> <!--Division setup for the Software developer part of the page-->";
@@ -54,42 +54,28 @@
                         echo "<p>Reports to \"$reportsTo\"</p> ";
                         echo "<section class='responsibilities'> <!--Section for the responsibilities of the job-->";
                             echo "<h3>Key Responsibilities</h3>";
+                            echo "<p>$keyResponsibilities</p>";
                             echo "<ul> <!--Unordered list for Software devloper responsibilities--> <!--Utilised the prompt in gen AI : Generate Key responsibilities. A list of the specific tasks that are to be performed for software developer-->";
-                                echo "<li>Design, develop, and implement software solutions that meet the business requirements.</li>";
-                                echo "<li>Write clean, scalable, and efficient code, following best practices and coding standards.</li>";
-                                echo "<li>Perform code reviews and provide constructive feedback to peers.</li>";
-                                echo "<li>Collaborate with project managers, designers, and other developers to deliver high-quality solutions on time.</li>";
-                                echo "<li>Troubleshoot, debug, and upgrade existing software applications.</li>";
-                                echo "<li>Test and deploy applications and systems, ensuring cross-platform functionality.</li>";
-                                echo "<li>Document development processes, code changes, and technical specifications.</li>";
-                                echo "<li>Stay up-to-date with emerging trends and technologies in software development.</li>";
-                                echo "<li>Provide technical support and guidance to other team members when necessary.</li>";
+                            for ($i=0; $i<count($keyResponsibilities); $i++){
+                                echo "<li>$keyResponsibilities[$i]</li>";
+                            }
                             echo "</ul>";
                         echo "</section>";
                         echo "<h3 class='required_qualifications'>Required qualifications, skills, knowledge and attributes</h3> <!-- Header for the required qualifications-->";
                         echo "<section class='essential'> <!-- new section for the essential requirements for software devloper-->";
                             echo "<h4>Essential</h4>";
                             echo "<ol> <!--Ordered list--> <!--Utilised the prompt in gen AI : Generate essential requirements for a software developer-->";
-                                echo "<li>Bachelor's degree in Computer Science, Software Engineering, or a related field, or equivalent practical experience.</li>";
-                                echo "<li>Minimum of 3 years of professional experience in software development.</li>";
-                                echo "<li>Strong proficiency in at least two programming languages such as Java, Python, C#, or JavaScript.</li>";
-                                echo "<li>Experience with software development frameworks and technologies (e.g., .NET, React, Angular, Spring, Django).</li>";
-                                echo "<li>Strong understanding of object-oriented design principles and software architecture.</li>";
-                                echo "<li>Proficient in version control systems, such as Git.</li>";
-                                echo "<li>Familiarity with relational and non-relational databases (e.g., MySQL, MongoDB).</li>";
-                                echo "<li>Ability to work independently and as part of a team in a fast-paced environment.</li>";
+                            for ($i=0; $i<count($essentialQualifications); $i++){
+                                echo "<li>$essentialQualifications[$i]</li>";
+                            }
                             echo "</ol>";
                         echo "</section>";
                         echo "<aside class='preferrable'> <!--Aside element for preferred qualifications for software developer with an unordered list to allow it to pan on the left side of the screen-->";
                             echo "<h4>Preferrable</h4>";
                             echo "<ul style='list-style-type: square;'> <!--Lists the dot points in squares rather than dots --> <!--Utilised the prompt in gen AI : Generate preferred requirements for a software developer-->";
-                                echo "<li>Master's degree in Computer Science, Software Engineering, or a related field.</li>";
-                                echo "<li>5+ years of experience in software development.</li>";
-                                echo "<li>Experience with cloud platforms such as AWS, Azure, or Google Cloud.</li>";
-                                echo "<li>Knowledge of containerization technologies such as Docker and Kubernetes.</li>";
-                                echo "<li>Familiarity with CI/CD pipelines and automated testing tools.</li>";
-                                echo "<li>Understanding of Agile methodologies, such as Scrum or Kanban.</li>";
-                                echo "<li>Experience with mobile development frameworks (e.g., React Native, Swift, Kotlin).</li>";
+                            for ($i=0; $i<count($preferrableQualifications); $i++){
+                                echo "<li>$preferrableQualifications[$i]</li>";
+                            }
                             echo "</ul>";
                         echo "</aside>";
                         echo "<!--Utilised the prompt in gen AI : Generate candidate description for a software developer-->";
