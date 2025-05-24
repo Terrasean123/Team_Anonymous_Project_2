@@ -28,7 +28,7 @@
 
             if ($result && mysqli_num_rows($result) > 0){
                 while ($row = mysqli_fetch_assoc($result)){
-                    $jobReferenceNum=htmlspecialchars($row['job_reference_number']);
+                    $jobReferenceNum=htmlspecialchars($row['job_reference_number']);    #Setup all the varibales for each column in the jobs database
                     $jobTitle=htmlspecialchars($row['job_title']);
                     $employer=htmlspecialchars($row['employer']);
                     $location=htmlspecialchars($row['location']);
@@ -40,6 +40,9 @@
                     $essentialQualifications=htmlspecialchars($row['essential_qualifications']);
                     $preferrableQualifications=htmlspecialchars($row['preferrable_qualifications']);
                     $idealApplicant=htmlspecialchars($row['ideal_applicant']);
+
+
+
                 }
             }
         }
