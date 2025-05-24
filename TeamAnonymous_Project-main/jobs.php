@@ -51,7 +51,7 @@
                         echo "<p>$jobDescription</p>";
                         echo "<h3>Salary Range</h3>";
                         echo "<p>$$jobMinSalary - $$jobMaxSalary per year</p> <!--Researched myself and chose some numbers-->";
-                        echo "<p>Reports to \"$reportsTo\"</p> ";
+                        echo "<p>Reports to $reportsTo</p> ";
                         echo "<section class='responsibilities'> <!--Section for the responsibilities of the job-->";
                             echo "<h3>Key Responsibilities</h3>";
                             echo "<ul> <!--Unordered list for Software devloper responsibilities--> <!--Utilised the prompt in gen AI : Generate Key responsibilities. A list of the specific tasks that are to be performed for software developer-->";
@@ -80,7 +80,7 @@
                         echo "<!--Utilised the prompt in gen AI : Generate candidate description for a software developer-->";
                         echo "<p class ='candidate_description'>The successful applicant will be expected to work in an environment that values innovation, collaboration, and continuous improvement.</p>";
                         echo "<p class='apply_button'>";
-                            echo "<a href='apply.html' class='apply-button'>Apply Now</a> <!--apply button that links to apply page-->";
+                            echo "<a href='apply.php' class='apply-button'>Apply Now</a> <!--apply button that links to apply page-->";
                         echo "</p>";
                     echo "</div>";
                 }
