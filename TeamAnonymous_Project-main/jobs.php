@@ -43,14 +43,14 @@
 
 
                     echo "<div class='job'> <!--Division setup for the Software developer part of the page-->";
-                        echo "<h2>\"$jobTitle \" (\"$jobReferenceNum\")</h2> <!--Utilised the prompt in gen AI : Generate a 5 digit reference number for software developer job -->";
-                        echo "<p>\"$employer\"</p>";
-                        echo "<p>\"$location\"</p>";
+                        echo "<h2>$jobTitle ($jobReferenceNum)</h2> <!--Utilised the prompt in gen AI : Generate a 5 digit reference number for software developer job -->";
+                        echo "<p>$employer</p>";
+                        echo "<p>$location</p>";
                         echo "<h3>Brief Description</h3>";
                         echo "<!--Utilised the prompt in gen AI : Generate a brief description of the position for software developer-->";
-                        echo "<p>\"$jobDescription\"</p>";
+                        echo "<p>$jobDescription</p>";
                         echo "<h3>Salary Range</h3>";
-                        echo "<p>$\"$jobMinSalary\" - $\"$jobMaxSalary\" per year</p> <!--Researched myself and chose some numbers-->";
+                        echo "<p>$$jobMinSalary - $$jobMaxSalary per year</p> <!--Researched myself and chose some numbers-->";
                         echo "<p>Reports to \"$reportsTo\"</p> ";
                         echo "<section class='responsibilities'> <!--Section for the responsibilities of the job-->";
                             echo "<h3>Key Responsibilities</h3>";
