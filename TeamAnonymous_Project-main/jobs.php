@@ -18,27 +18,32 @@
     </div>
     <main>
         <?php
-        include('db_connection.php');
+        require_once('db_connection.php');
 
-        $sql = "SELECT * FROM jobs";
-        $result = mysqli_query($conn, $sql)
+        if(!$conn) {
+            echo "<p>Database connection failed: " . mysqli_connect_error() . "</p>";
+        }else{
+            $sql = "SELECT * FROM jobs";
+            $result = mysqli_query($conn, $sql)
 
-        if($result && mysqli_numrows($result) > 0){
-            while ($row = mysqli_fetch_assoc($result)){
-                $jobReferenceNum=htmlspecialchars($row['job_reference_number']);
-                $jobTitle=htmlspecialchars($row['job_title']);
-                $employer=htmlspecialchars($row['employer']);
-                $location=htmlspecialchars($row['location']);
-                $jobDescription=htmlspecialchars($row['job_description']);
-                $jobMinSalary=htmlspecialchars($row['job_salary_min']);
-                $jobMaxSalary=htmlspecialchars($row['job_salary_max']);
-                $reportsTo=htmlspecialchars($row['reports_to']);
-                $keyResponsibilities=htmlspecialchars($row['key_responsibilities']);
-                $essentialQualifications=htmlspecialchars($row['essential_qualifications']);
-                $preferrableQualifications=htmlspecialchars($row['preferrable_qualifications']);
-                $idealApplicant=htmlspecialchars($row['ideal_applicant']);
+            if($result && mysqli_numrows($result) > 0){
+                while ($row = mysqli_fetch_assoc($result)){
+                    $jobReferenceNum=htmlspecialchars($row['job_reference_number']);
+                    $jobTitle=htmlspecialchars($row['job_title']);
+                    $employer=htmlspecialchars($row['employer']);
+                    $location=htmlspecialchars($row['location']);
+                    $jobDescription=htmlspecialchars($row['job_description']);
+                    $jobMinSalary=htmlspecialchars($row['job_salary_min']);
+                    $jobMaxSalary=htmlspecialchars($row['job_salary_max']);
+                    $reportsTo=htmlspecialchars($row['reports_to']);
+                    $keyResponsibilities=htmlspecialchars($row['key_responsibilities']);
+                    $essentialQualifications=htmlspecialchars($row['essential_qualifications']);
+                    $preferrableQualifications=htmlspecialchars($row['preferrable_qualifications']);
+                    $idealApplicant=htmlspecialchars($row['ideal_applicant']);
+                }
             }
         }
+        
 
         ?>
         <div class="SDT21"> <!--Division setup for the Software developer part of the page-->
