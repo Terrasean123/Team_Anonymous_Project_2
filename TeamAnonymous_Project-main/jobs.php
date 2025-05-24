@@ -26,7 +26,7 @@
             $sql = "SELECT * FROM jobs";
             $result = mysqli_query($conn, $sql);
 
-            if ($result && mysqli_numrows($result) > 0){
+            if ($result && mysqli_num_rows($result) > 0){
                 while ($row = mysqli_fetch_assoc($result)){
                     $jobReferenceNum=htmlspecialchars($row['job_reference_number']);
                     $jobTitle=htmlspecialchars($row['job_title']);
