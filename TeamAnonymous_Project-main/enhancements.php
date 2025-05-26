@@ -5,18 +5,14 @@ require_once("db_connection.php");
 // Database connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
-    die("❌ Database connection failed: " . mysqli_connect_error());
+    die("Database connection failed: " . mysqli_connect_error());
 }
 
 // LOGIN HANDLER
 if (isset($_POST['log_sudmit'])) {
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
-
-    if (empty($username) || empty($password)) {
-        die("⚠️ Please fill in both login fields.");
-    }
-
+    
     $stmt = mysqli_prepare($conn, "SELECT username, password FROM users WHERE username = ?");
     mysqli_stmt_bind_param($stmt, "s", $username);
     mysqli_stmt_execute($stmt);
