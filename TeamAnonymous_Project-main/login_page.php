@@ -15,9 +15,10 @@
             <input type="password" name="password" placeholder="Enter password" required>
             <button type="submit" name="log_sudmit">Login</button>
         </form>
-        <h2>New Manager? Register Below</h2>
+        <h2>Register Here</h2>
         <form class="register" method="POST" action="enhancements.php">
             <input type="text" name="reg_username" placeholder="Choose a username" required>
+            <p>
             <input type="password" name="reg_password" placeholder="Create a password" required>
             <button type="submit" name="reg_sudmit">Register</button>
         </form>

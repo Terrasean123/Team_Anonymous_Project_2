@@ -43,13 +43,13 @@ elseif (isset($_POST['reg_sudmit'])) {
     $reg_password = trim($_POST['reg_password']);
 
     // Username rule: 5–20 characters, letters, numbers, and underscores only
-    if (!preg_match('/^[a-zA-Z0-9_]{5,20}$/', $reg_username)) {
-        die("❌ Username must be 5–20 characters and only letters, numbers, and underscores.");
+    if (!preg_match('/^[a-zA-Z0-9]{3,15}$/', $reg_username)) {
+        die("Username must be 3 to 15 characters long and contain only letters and numbers.");
     }
 
-    // Password rule: minimum 8 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character
-    if (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/', $reg_password)) {
-        die("❌ Password must be at least 8 characters and include uppercase, lowercase, number, and special character.");
+    // Validate password: minimum 6 characters
+    if (strlen($reg_password) < 6) {
+        die("Password must be at least 6 characters long.");
     }
 
     // Check if username already exists
