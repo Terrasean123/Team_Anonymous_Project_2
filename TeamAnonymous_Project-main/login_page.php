@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php include 'header.inc'; ?>
-    <div id="manage-content">
+    <div id="logins">
         <h1>Manager Login</h1>
         <form class="logins" method="POST" action="enhancements.php">
             <input type="text" placeholder="Enter username" name="username">
