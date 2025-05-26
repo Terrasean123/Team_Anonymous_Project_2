@@ -31,7 +31,7 @@ if (isset($_POST['log_sudmit'])) {
             header("Location: manage.php");
             exit();
         } else {
-            echo "❌ Incorrect username or password.";
+            echo "Incorrect username or password.";
         }
     }
     mysqli_stmt_close($stmt);
@@ -44,7 +44,7 @@ elseif (isset($_POST['reg_sudmit'])) {
 
     // Username rule: 5–20 characters, letters, numbers, and underscores only
     if (!preg_match('/^[a-zA-Z0-9]{3,15}$/', $reg_username)) {
-        die("Username must be 3 to 15 characters long and contain only letters and numbers.");
+        die("Username must be 3 to 15 characters long with only letters/numbers.");
     }
 
     // Validate password: minimum 6 characters
