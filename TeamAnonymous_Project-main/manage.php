@@ -50,7 +50,7 @@
 </body>
 </html>
 <div id="manage_script">
-<?php
+<?php 
         require_once 'db_connection.php';  // Include database connection
 
         if (isset($_POST['updateStatus'])) {
@@ -71,8 +71,9 @@
         if (isset($_POST['deleteJobRefNum']) && $_POST['deleteJobRefNum'] !== '') {
         // Sanitize input to prevent SQL injection
             $deleteJobRefNum = mysqli_real_escape_string($conn, $_POST['deleteJobRefNum']);
-            
-            // Prepare DELETE SQL query to remove EOIs with the specified job reference number
+        
+            // Prepare DELETE SQL query to remove EOIs with the specified job reference number //sdasda
+        
             $deleteSql = "DELETE FROM eoi WHERE job_reference_number = '$deleteJobRefNum'";
             $deleteResult = mysqli_query($conn, $deleteSql);
             

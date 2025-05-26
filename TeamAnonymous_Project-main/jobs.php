@@ -23,7 +23,7 @@
         if(!$conn) {
             echo "<p>Database connection failed: " . mysqli_connect_error() . "</p>";
         }else{
-            $sql = "SELECT * FROM jobs";
+            $sql = "SELECT * FROM jobs"; 
             $result = mysqli_query($conn, $sql);
 
             if ($result && mysqli_num_rows($result) > 0){
