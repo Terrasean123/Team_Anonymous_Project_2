@@ -31,6 +31,7 @@
     justify-content: center;
 }
 
+
 /* Style for labels */
 #manage-content label {
     font-weight: bold;
@@ -88,45 +89,86 @@
     background-color: #f9f9f9;
 }
 
-
-
-/* Home Page */
-/* Apply prompt*/
-.apply_prompt{
-    display: block;
-    float: none;
-    border: solid;
-    border-radius:  25px;
-    background-color: white;
-    border-color: #6638a4;
-    text-align: center;
-    font-weight:bold;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 400px;
-    height: 200px;
-    position: relative;
-    left: 200px;
-    bottom: 350px ;
-    font-size: 1.5pc ;
+/* Container wrapping the login and register forms */
+#logins {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 30px 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    font-family: Arial, sans-serif;
 }
 
-.apply_prompt a{
-    display: block;
-    float: none;
-    border-radius:  25px;
-    font-weight: bold;
+/* Headings color and spacing */
+#logins h1,
+#logins h2 {
+    color: #370b52;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* Forms layout */
+#logins form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* Inputs styling */
+#logins input[type="text"],
+#logins input[type="password"] {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline-offset: 2px;
+    transition: border-color 0.3s ease;
+}
+
+/* Input focus highlight */
+#logins input[type="text"]:focus,
+#logins input[type="password"]:focus {
+    border-color: #6a1b9a;
+    box-shadow: 0 0 8px rgba(106, 27, 154, 0.4);
+}
+
+/* Buttons styling */
+#logins button {
+    padding: 12px 25px;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
     color: white;
-    text-decoration: none;
-    background-color: #6638a4;
-    border-color: #6638a4;
-    text-align: center;
-    padding: 5px;
-    position: relative;
-    left: 115px;
-    font-size: 1.5pc ;
-    width: 165px;
-
+    background: linear-gradient(135deg, #6a1b9a, #a73fb9);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Button hover effect */
+#logins button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(106, 27, 154, 0.5);
+}
+
+/* Placeholder styling */
+#logins input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Responsive adjustment */
+@media (max-width: 480px) {
+    #logins {
+        margin: 40px 20px;
+        padding: 20px;
+    }
+}
+
 /* Apply Prompt*/
 
 /* keywords/general Use */
