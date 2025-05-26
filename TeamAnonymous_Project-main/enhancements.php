@@ -1,8 +1,8 @@
 <?php
 session_start();
-require_once("db_connecton.php");
+require_once("db_connection.php");
 
-$conn = mysqli_connect($host, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 // Get user input
 $username = trim($_POST['username']);
