@@ -17,9 +17,9 @@
         </form>
         <h2>Register</h2>
         <form class="register" method="POST" action="enhancements.php">
-            <input type="text" name="reg_username" placeholder="Choose a username" required />
+            <input type="text" name="reg_username" placeholder="Enter a username" required />
             <div class="rule">Username must be 3 to 15 characters long with only letters/numbers.</div>
-            <input type="password" name="reg_password" placeholder="Create a password" required />
+            <input type="password" name="reg_password" placeholder="Enter a password" required />
             <div class="rule">Password must be at least 6 characters long.</div>
             <button type="submit" name="reg_sudmit">Register</button>
         </form>
