@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2025 at 02:05 PM
+-- Generation Time: May 26, 2025 at 03:47 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -45,15 +45,6 @@ CREATE TABLE `eoi` (
   `qualifications` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `eoi`
---
-
-INSERT INTO `eoi` (`id`, `job_reference_number`, `first_name`, `last_name`, `street_address`, `suburb_town`, `state`, `postcode`, `email`, `phone_number`, `skills`, `status`, `gender`, `dob`, `qualifications`) VALUES
-(0, '[value-2]', '[value-3]', '[value-4]', '[value-5]', '[value-6]', '[value-7]', '[value-8]', '[value-9]', '[value-10]', '[value-11]', '', '', '0000-00-00', '[value-15]'),
-(3, 'ITD11', 'John', 'Smith', '456 Hill Rd', 'Sydney', 'NSW', '2000', 'john.smith@example.com', '0423456789', 'HTML, CSS, JavaScript', 'New', 'male', '1985-07-22', 'certificateIV, threeYearsExp'),
-(5, 'UXD19', 'David', 'Lee', '321 Mountain Dr', 'Adelaide', 'SA', '5000', 'david.lee@example.com', '0445678901', 'UI/UX Design, Figma', 'New', 'male', '1998-12-01', 'certificateIV');
-
 -- --------------------------------------------------------
 
 --
@@ -90,17 +81,17 @@ INSERT INTO `jobs` (`job_reference_number`, `job_title`, `employer`, `location`,
 -- Table structure for table `users`
 --
 
-CREATE TABLE users (
-    username VARCHAR(255) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL
-);
+CREATE TABLE `users` (
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`username`, `password`) VALUES
-('123', '123');
+('useradmin123', '$2y$10$xNBYywDOZ8iFdMSoXj3FX.S6HHs.o7IMZQbskJXORARTtvOoDvPcG');
 
 --
 -- Indexes for dumped tables
@@ -117,6 +108,12 @@ ALTER TABLE `eoi`
 --
 ALTER TABLE `jobs`
   ADD PRIMARY KEY (`job_reference_number`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- AUTO_INCREMENT for dumped tables
