@@ -11,15 +11,16 @@
     <div id="logins">
         <h1>Manager Login</h1>
         <form class="login" method="POST" action="enhancements.php">
-            <input type="text" name="username" placeholder="Enter username" required>
-            <input type="password" name="password" placeholder="Enter password" required>
+            <input type="text" name="username" placeholder="Enter username" required />
+            <input type="password" name="password" placeholder="Enter password" required />
             <button type="submit" name="log_sudmit">Login</button>
         </form>
-        <h2>Register Here</h2>
+        <h2>Register</h2>
         <form class="register" method="POST" action="enhancements.php">
-            <input type="text" name="reg_username" placeholder="Choose a username" required>
-            <p>
-            <input type="password" name="reg_password" placeholder="Create a password" required>
+            <input type="text" name="reg_username" placeholder="Choose a username" required />
+            <div class="validation-info">Username must be 3 to 15 characters, letters and numbers only.</div>
+            <input type="password" name="reg_password" placeholder="Create a password" required />
+            <div class="validation-info">Password must be at least 6 characters long.</div>
             <button type="submit" name="reg_sudmit">Register</button>
         </form>
     </div>
