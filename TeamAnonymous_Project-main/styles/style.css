@@ -1,3 +1,4 @@
+/*Manage Page*/
 #manage-content {
     flex: 1 0 auto;
 }
@@ -7,15 +8,12 @@
     justify-content: center;
 }
 
-
 #manage-content h1,
 #manage-content h2 {
     color: #370b52; 
-    margin-bottom: 25px; /* Space below headings */
-    text-align: center; /* Center the headings */
+    margin-bottom: 25px; 
+    text-align: center; 
 }
-
-
 
 #manage-content form {
     border: 1px solid #ddd; 
@@ -31,28 +29,24 @@
     justify-content: center;
 }
 
-
-/* Style for labels */
 #manage-content label {
     font-weight: bold;
     color: #555;
-    min-width: 150px; /* Give labels a minimum width for alignment */
+    min-width: 150px; 
 }
 
-/* Style for text input fields and select dropdowns */
 #manage-content input[type="text"],
 #manage-content select {
-    flex-grow: 1; /* Allow inputs to grow and fill available space */
+    flex-grow: 1; 
     padding: 10px 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    max-width: 300px; /* Limit max width for readability */
+    max-width: 300px; 
 }
 
-/* Style for buttons within forms */
 #manage-content form button {
     padding: 10px 25px;
-    background: linear-gradient(135deg, #6a1b9a, #a73fb9); /* Your existing purple gradient */
+    background: linear-gradient(135deg, #6a1b9a, #a73fb9); 
     color: white;
     border: none;
     border-radius: 25px;
@@ -88,8 +82,7 @@
 #manage_script tr:nth-child(even) {
     background-color: #f9f9f9;
 }
-
-/* Container wrapping the login and register forms */
+/*Login_Page*/
 #logins {
     max-width: 400px;
     margin: 60px auto;
@@ -101,7 +94,6 @@
     font-family: Arial, sans-serif;
 }
 
-/* Headings color and spacing */
 #logins h1,
 #logins h2 {
     color: #370b52;
@@ -110,7 +102,6 @@
     font-weight: 700;
 }
 
-/* Forms layout */
 #logins form {
     display: flex;
     flex-direction: column;
@@ -118,7 +109,6 @@
     margin-bottom: 30px;
 }
 
-/* Inputs styling */
 #logins input[type="text"],
 #logins input[type="password"] {
     padding: 12px 15px;
@@ -129,14 +119,12 @@
     transition: border-color 0.3s ease;
 }
 
-/* Input focus highlight */
 #logins input[type="text"]:focus,
 #logins input[type="password"]:focus {
     border-color: #6a1b9a;
     box-shadow: 0 0 8px rgba(106, 27, 154, 0.4);
 }
 
-/* Buttons styling */
 #logins button {
     padding: 12px 25px;
     font-weight: 700;
@@ -149,19 +137,16 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Button hover effect */
 #logins button:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(106, 27, 154, 0.5);
 }
 
-/* Placeholder styling */
 #logins input::placeholder {
     color: #999;
     font-style: italic;
 }
 
-/* Responsive adjustment */
 @media (max-width: 480px) {
     #logins {
         margin: 40px 20px;
