@@ -33,6 +33,7 @@ if (isset($_POST['log_sudmit'])) {
         } else {
             echo "❌ Incorrect username or password.";
         }
+    }
     mysqli_stmt_close($stmt);
 }
 
@@ -40,10 +41,6 @@ if (isset($_POST['log_sudmit'])) {
 elseif (isset($_POST['reg_sudmit'])) {
     $reg_username = trim($_POST['reg_username']);
     $reg_password = trim($_POST['reg_password']);
-
-    if (empty($reg_username) || empty($reg_password)) {
-        die("⚠️ Please fill in both registration fields.");
-    }
 
     // Username rule: 5–20 characters, letters, numbers, and underscores only
     if (!preg_match('/^[a-zA-Z0-9_]{5,20}$/', $reg_username)) {
@@ -62,7 +59,7 @@ elseif (isset($_POST['reg_sudmit'])) {
     mysqli_stmt_store_result($stmt);
 
     if (mysqli_stmt_num_rows($stmt) > 0) {
-        die("❌ Username already exists.");
+        die("Username already exists.");
     }
     mysqli_stmt_close($stmt);
 
@@ -72,9 +69,9 @@ elseif (isset($_POST['reg_sudmit'])) {
     mysqli_stmt_bind_param($stmt, "ss", $reg_username, $hashed_password);
 
     if (mysqli_stmt_execute($stmt)) {
-        echo "✅ Registration successful. You may now log in.";
+        echo "Registration successful. You may now log in.";
     } else {
-        echo "❌ Registration failed: " . mysqli_error($conn);
+        echo "Registration failed: " . mysqli_error($conn);
     }
 
     mysqli_stmt_close($stmt);
