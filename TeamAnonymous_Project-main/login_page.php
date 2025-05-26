@@ -15,6 +15,11 @@
             <input type="password" placeholder="Enter password" name="password">
             <button type="submit">Login</button>
         </form>
+        <form class="register" method="POST" action="enhancements.php">
+            <input type="text" placeholder="Enter username" name="reg_username">
+            <input type="password" placeholder="Enter password" name="reg_password">
+            <button type="submit">Register</button>
+        </form>
     <div>
 </body>
 </html>
