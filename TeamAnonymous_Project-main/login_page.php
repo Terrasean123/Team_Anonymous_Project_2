@@ -13,12 +13,12 @@
         <form class="logins" method="POST" action="enhancements.php">
             <input type="text" placeholder="Enter username" name="username">
             <input type="password" placeholder="Enter password" name="password">
-            <button type="submit">Login</button>
+            <button type="submit" name="log_sudmit">Login</button>
         </form>
         <form class="register" method="POST" action="enhancements.php">
             <input type="text" placeholder="Enter username" name="reg_username">
             <input type="password" placeholder="Enter password" name="reg_password">
-            <button type="submit">Register</button>
+            <button type="submit" name="reg_sudmit">Register</button>
         </form>
     <div>
 </body>
