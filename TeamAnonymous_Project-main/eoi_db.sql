@@ -90,9 +90,9 @@ INSERT INTO `jobs` (`job_reference_number`, `job_title`, `employer`, `location`,
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
-  `username` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL
+CREATE TABLE users (
+    "username" VARCHAR(255) NOT NULL UNIQUE,
+    'password' VARCHAR(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --

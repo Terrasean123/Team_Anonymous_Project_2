@@ -2,56 +2,66 @@
 session_start();
 require_once("db_connection.php");
 
-if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['username']) && isset($_POST['password']) && ($_POST['reg_password']) && ($_POST['usernmame'])) {
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+if (!$conn) {
+    die("❌ Database connection failed: " . mysqli_connect_error());
+}
 
-    
-    if (!$conn) {
-        die("❌ Database connection failed: " . mysqli_connect_error());
+// LOGIN HANDLER
+if (isset($_POST['log_sudmit'])) {
+
+    if (!isset($_POST['username']) || !isset($_POST['password'])) {
+        die("⚠️ Please fill in both login fields.");
     }
 
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
 
-    $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
-    $result = mysqli_query($conn, $query);
+    // Retrieve user securely
+    $stmt = mysqli_prepare($conn, "SELECT username, password FROM users WHERE username = ?");
+    mysqli_stmt_bind_param($stmt, "s", $username);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_store_result($stmt);
 
-    $user = mysqli_fetch_assoc($result);
-    
-    if ($user) {
-        $_SESSION['username'] = $user['username'];
-        header("Location: manage.php");
-        exit();
+    if (mysqli_stmt_num_rows($stmt) === 1) {
+        mysqli_stmt_bind_result($stmt, $db_username, $db_password_hash);
+        mysqli_stmt_fetch($stmt);
+
+        if (password_verify($password, $db_password_hash)) {
+            $_SESSION['username'] = $db_username;
+            header("Location: manage.php");
+            exit();
+        } else {
+            echo "❌ Incorrect username or password.";
+        }
     } else {
-        echo " Incorrect username or password.";
+        echo "❌ Incorrect username or password.";
     }
-} else {
-    echo " Please submit the form first.";
+
+    mysqli_stmt_close($stmt);
 }
 
-if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['reg_username']) && isset($_POST['reg_password'])) {
+// REGISTRATION HANDLER
+elseif (isset($_POST['reg_sudmit'])) {
 
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-    if (!$conn) {
-        die("❌ Database connection failed: " . mysqli_connect_error());
+    if (!isset($_POST['reg_username']) || !isset($_POST['reg_password'])) {
+        die("⚠️ Please fill in both registration fields.");
     }
 
     $reg_username = trim($_POST['reg_username']);
     $reg_password = trim($_POST['reg_password']);
 
-    // Username rule: 5-20 characters, letters, numbers, underscores only
+    // Validate username
     if (!preg_match('/^[a-zA-Z0-9_]{5,20}$/', $reg_username)) {
-        die("❌ Username must be 5-20 characters long and contain only letters, numbers, and underscores.");
+        die("❌ Username must be 5–20 characters long, only letters, numbers, and underscores.");
     }
 
-    // Password rule example:
-    // At least 8 characters, at least one uppercase letter, one lowercase letter, one number, one special character
+    // Validate password
     if (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/', $reg_password)) {
         die("❌ Password must be at least 8 characters and include uppercase, lowercase, number, and special character.");
     }
 
-    // Check if username already exists
+    // Check for existing username
     $stmt = mysqli_prepare($conn, "SELECT id FROM users WHERE username = ?");
     mysqli_stmt_bind_param($stmt, "s", $reg_username);
     mysqli_stmt_execute($stmt);
@@ -62,13 +72,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['reg_username']) && is
     }
     mysqli_stmt_close($stmt);
 
-    // Hash the password before storing
-    $password_hash = password_hash($reg_password, PASSWORD_DEFAULT);
-
-    // Insert new user securely using prepared statements
+    // Insert new user
+    $hashed_password = password_hash($reg_password, PASSWORD_DEFAULT);
     $stmt = mysqli_prepare($conn, "INSERT INTO users (username, password) VALUES (?, ?)");
-    mysqli_stmt_bind_param($stmt, "ss", $reg_username, $password_hash);
-    
+    mysqli_stmt_bind_param($stmt, "ss", $reg_username, $hashed_password);
+
     if (mysqli_stmt_execute($stmt)) {
         echo "✅ Registration successful. You may now log in.";
     } else {
@@ -76,11 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['reg_username']) && is
     }
 
     mysqli_stmt_close($stmt);
-    mysqli_close($conn);
-
-} else {
-    echo "⚠️ Please submit the registration form with username and password.";
 }
-?>
-session_destroy()
+
+mysqli_close($conn);
 ?>
